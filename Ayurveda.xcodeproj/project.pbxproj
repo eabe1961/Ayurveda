@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0C02B81E586255000A6A63 /* Corpus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C02B71E586255000A6A63 /* Corpus.swift */; };
+		CE0C02BA1E586347000A6A63 /* ChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C02B91E586347000A6A63 /* ChapterViewController.swift */; };
+		CE0C02BD1E5863E1000A6A63 /* Texts-development in Resources */ = {isa = PBXBuildFile; fileRef = CE0C02BB1E5863E1000A6A63 /* Texts-development */; };
+		CE0C02BE1E5863E1000A6A63 /* Texts-production in Resources */ = {isa = PBXBuildFile; fileRef = CE0C02BC1E5863E1000A6A63 /* Texts-production */; };
+		CE0C02C01E5863F5000A6A63 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C02BF1E5863F5000A6A63 /* ChaptersViewController.swift */; };
 		CEEFB1D11E58532700CACE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFB1D01E58532700CACE57 /* AppDelegate.swift */; };
 		CEEFB1D31E58532700CACE57 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEFB1D21E58532700CACE57 /* MainMenuViewController.swift */; };
 		CEEFB1D61E58532700CACE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEFB1D41E58532700CACE57 /* Main.storyboard */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0C02B71E586255000A6A63 /* Corpus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Corpus.swift; sourceTree = "<group>"; };
+		CE0C02B91E586347000A6A63 /* ChapterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
+		CE0C02BB1E5863E1000A6A63 /* Texts-development */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Texts-development"; sourceTree = "<group>"; };
+		CE0C02BC1E5863E1000A6A63 /* Texts-production */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Texts-production"; sourceTree = "<group>"; };
+		CE0C02BF1E5863F5000A6A63 /* ChaptersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 		CEEFB1CD1E58532700CACE57 /* Ayurveda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ayurveda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEFB1D01E58532700CACE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEFB1D21E58532700CACE57 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0C02C11E586A74000A6A63 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				CEEFB1D01E58532700CACE57 /* AppDelegate.swift */,
+				CEEFB1D91E58532700CACE57 /* LaunchScreen.storyboard */,
+				CEEFB1DC1E58532700CACE57 /* Info.plist */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
 		CEEFB1C41E58532600CACE57 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +74,15 @@
 		CEEFB1CF1E58532700CACE57 /* Ayurveda */ = {
 			isa = PBXGroup;
 			children = (
-				CEEFB1D01E58532700CACE57 /* AppDelegate.swift */,
 				CEEFB1D21E58532700CACE57 /* MainMenuViewController.swift */,
+				CE0C02BF1E5863F5000A6A63 /* ChaptersViewController.swift */,
+				CE0C02B91E586347000A6A63 /* ChapterViewController.swift */,
+				CE0C02BB1E5863E1000A6A63 /* Texts-development */,
+				CE0C02BC1E5863E1000A6A63 /* Texts-production */,
+				CE0C02B71E586255000A6A63 /* Corpus.swift */,
+				CE0C02C11E586A74000A6A63 /* Supporting files */,
 				CEEFB1D41E58532700CACE57 /* Main.storyboard */,
 				CEEFB1D71E58532700CACE57 /* Assets.xcassets */,
-				CEEFB1D91E58532700CACE57 /* LaunchScreen.storyboard */,
-				CEEFB1DC1E58532700CACE57 /* Info.plist */,
 			);
 			path = Ayurveda;
 			sourceTree = "<group>";
@@ -123,8 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEFB1DB1E58532700CACE57 /* LaunchScreen.storyboard in Resources */,
+				CE0C02BD1E5863E1000A6A63 /* Texts-development in Resources */,
 				CEEFB1D81E58532700CACE57 /* Assets.xcassets in Resources */,
 				CEEFB1D61E58532700CACE57 /* Main.storyboard in Resources */,
+				CE0C02BE1E5863E1000A6A63 /* Texts-production in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0C02BA1E586347000A6A63 /* ChapterViewController.swift in Sources */,
 				CEEFB1D31E58532700CACE57 /* MainMenuViewController.swift in Sources */,
+				CE0C02B81E586255000A6A63 /* Corpus.swift in Sources */,
+				CE0C02C01E5863F5000A6A63 /* ChaptersViewController.swift in Sources */,
 				CEEFB1D11E58532700CACE57 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

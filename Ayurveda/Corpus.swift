@@ -26,7 +26,6 @@ class Corpus {
 
     func chapterimage(chapternr: String) -> UIImage? {
         let fn = fullresourcepath + "/" + chapternr + ".jpg"
-        print(fn)
         return UIImage(contentsOfFile: fn)
         }
 
@@ -44,7 +43,7 @@ class Corpus {
         }
 
     func extractmetadata(filename: String) -> (String, String) {
-        return ("A", "B")
+        return ("TODO TITLE", "TODO SUBTITLE")
         }
 
     init(subdir: String = "", prefix: String) {
@@ -56,7 +55,7 @@ class Corpus {
         do {
             let filenames = try FileManager.default.contentsOfDirectory(atPath: pad)
             for filename in filenames.sorted() {
-                if (filename.hasPrefix(prefix)) { // TODO: configurable, in init
+                if (filename.hasPrefix(prefix)) {
                     let parts = filename.components(separatedBy: " - ")
                     let chapter_and_nr = parts[0]
                     let title_and_ext = parts[1]
@@ -71,10 +70,9 @@ class Corpus {
                         fullfilename = subdir + "/" + filename
                         }
                     chapterfilenames[chapternr] = fullfilename
-                    // Isoleer
+                    // TODO: Parse HTML & determine title and subtitle
                     var headertitle = "", headersubtitle = ""
                     (headertitle, headersubtitle) = extractmetadata(filename: fullfilename)
-                    print(headertitle, headersubtitle)
                     }
                 }
             }
