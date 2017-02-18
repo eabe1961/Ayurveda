@@ -1,9 +1,9 @@
 
-//  ViewController.swift
+//  MainMenuViewController.swift
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
