@@ -8,6 +8,7 @@ class MainMenuViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             navigationItem.title = "Ayur•veda"
+
             // If the file 'Texts-production/Introductie.html' exists, use the production content. Otherwise, use the development content.
             var sourceDir = "Texts-development"
             let introFilename = Bundle.main.resourcePath! + "/Texts-production/Introductie.html"
