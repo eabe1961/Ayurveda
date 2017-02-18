@@ -15,5 +15,8 @@ class ChapterViewController: UIViewController {
         if let url = Bundle.main.url(forResource: resource, withExtension: "") {
             webView.loadRequest(URLRequest(url: url))
             }
+        else {
+            print("Can't load resource: ", resource)
+            }
         }
 }

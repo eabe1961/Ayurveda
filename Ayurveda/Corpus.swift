@@ -3,6 +3,8 @@
 
 import UIKit
 
+var corpus: Corpus! = nil
+
 class Corpus {
 
     var fullresourcepath = ""
@@ -42,10 +44,6 @@ class Corpus {
         return s
         }
 
-    func extractmetadata(filename: String) -> (String, String) {
-        return ("TODO TITLE", "TODO SUBTITLE")
-        }
-
     init(subdir: String = "", prefix: String) {
         var pad = Bundle.main.resourcePath!
         if subdir != "" {
@@ -70,9 +68,6 @@ class Corpus {
                         fullfilename = subdir + "/" + filename
                         }
                     chapterfilenames[chapternr] = fullfilename
-                    // TODO: Parse HTML & determine title and subtitle
-                    var headertitle = "", headersubtitle = ""
-                    (headertitle, headersubtitle) = extractmetadata(filename: fullfilename)
                     }
                 }
             }
@@ -80,4 +75,5 @@ class Corpus {
             print(error)
             }
         }
+
     }

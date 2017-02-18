@@ -40,6 +40,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1IV-O8-bJv" kind="show" identifier="introductie" id="oH7-2d-eF0"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="bCr-TP-kDT" imageView="jNb-kX-uwU" style="IBUITableViewCellStyleDefault" id="QsK-56-hN1">
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -169,6 +172,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1IV-O8-bJv" kind="show" identifier="voorbehoud" id="FnZ-7o-9hv"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Lh4-2W-NFH" imageView="8mh-FD-R1R" style="IBUITableViewCellStyleDefault" id="Pbv-ep-qcP">
                                         <rect key="frame" x="0.0" y="308" width="375" height="44"/>
@@ -190,6 +196,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1IV-O8-bJv" kind="show" identifier="colofon" id="eHn-2h-Txa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -214,12 +223,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Mfi-Nc-c1X">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="gmL-pS-nMd" detailTextLabel="wLw-4q-Ufw" style="IBUITableViewCellStyleSubtitle" id="Mfi-Nc-c1X">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mfi-Nc-c1X" id="xJ4-9X-S5H">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gmL-pS-nMd">
+                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wLw-4q-Ufw">
+                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="1IV-O8-bJv" kind="show" id="YWS-xG-B2u"/>
@@ -234,7 +259,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mG-CS-Fvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1892" y="124"/>
+            <point key="canvasLocation" x="1977" y="-323"/>
         </scene>
         <!--Chapter View Controller-->
         <scene sceneID="Cke-eA-bY8">
@@ -267,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Big-vV-m1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2666" y="124"/>
+            <point key="canvasLocation" x="2778" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hik-NF-WRw">
@@ -298,4 +323,7 @@
         <image name="Tree" width="100" height="100"/>
         <image name="Vedas" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="YWS-xG-B2u"/>
+    </inferredMetricsTieBreakers>
 </document>

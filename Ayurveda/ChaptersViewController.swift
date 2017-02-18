@@ -5,8 +5,6 @@ import UIKit
 
 class ChaptersViewController: UITableViewController {
 
-    let corpus = Corpus(subdir: "Texts-development", prefix: "Hoofdstuk")
-
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Filosofie"
@@ -20,8 +18,8 @@ class ChaptersViewController: UITableViewController {
         let hnr = corpus.chapternumber(volgnr: indexPath.row)
         let titel = corpus.chaptertitle(chapternr: hnr)
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-        cell.textLabel?.text = "\(hnr) \(titel)"
-        cell.detailTextLabel?.text = "(hier komt detailinformatie)"
+        cell.textLabel?.text = "Hoofdstuk \(hnr)"
+        cell.detailTextLabel?.text = titel
         cell.imageView?.image = corpus.chapterimage(chapternr: hnr)
         cell.tag = indexPath.row
         return cell
