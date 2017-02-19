@@ -1,5 +1,7 @@
 
 //  ChapterViewController.swift
+//
+// Show a single HTML file resource in a WebView.
 
 import UIKit
 

@@ -320,7 +320,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4k-vy-RLG">
                                 <rect key="frame" x="16" y="617" width="343" height="30"/>
-                                <state key="normal" title="volgende vraag / klaar"/>
+                                <state key="normal" title="volgende vraag"/>
                                 <connections>
                                     <action selector="nextQuestionTap:" destination="aYa-fb-tUb" eventType="touchUpInside" id="5Ed-kd-Cpd"/>
                                 </connections>
@@ -437,9 +437,11 @@
                         <outlet property="questionLabel" destination="5Lo-mv-XrY" id="BcG-5I-UEk"/>
                         <outlet property="titleLabel" destination="iot-xf-U6a" id="wIu-Z2-9op"/>
                         <outlet property="vikrutiSegment" destination="SK8-3x-WOO" id="ijn-Hm-Oar"/>
+                        <segue destination="NIM-1K-K5k" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenu:" id="qWG-gZ-BlD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCF-we-5DX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NIM-1K-K5k" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2237.5999999999999" y="989.95502248875573"/>
         </scene>

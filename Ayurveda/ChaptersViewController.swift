@@ -1,5 +1,7 @@
 
 //  ChaptersViewController.swift
+//
+// Shows a list of reading material.
 
 import UIKit
 

@@ -8,6 +8,7 @@ let questions = [
     "Ik leer snel en vergeet gemakkelijk",
     "Ik ben enthousiast en levendig",
     "Ik heb een dun uiterlijk en kom niet gemakkelijk aan",
+    /*
     "Ik ben licht en bewegelijk",
     "Ik ben besluiteloos",
     "Ik raak gemakkelijk opgeblazen en verstopt",
@@ -55,6 +56,7 @@ let questions = [
     "Ik ben liefdevol, hartelijk, zorgzaam en innemend",
     "Ik eet langzaam",
     "Ik denk, ervaar de wereld en werk systematisch",
+    */
     ]
 
 
