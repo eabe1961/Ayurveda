@@ -8,7 +8,7 @@ let questions = [
     "Ik leer snel en vergeet gemakkelijk",
     "Ik ben enthousiast en levendig",
     "Ik heb een dun uiterlijk en kom niet gemakkelijk aan",
-    /*
+    /* Even uitgecommenteerd, anders duurt het doorlopen van de vragen zo lang.
     "Ik ben licht en bewegelijk",
     "Ik ben besluiteloos",
     "Ik raak gemakkelijk opgeblazen en verstopt",
@@ -62,16 +62,32 @@ let questions = [
 
 class Answers {
     var created: Date // Date/time when the quiz was taken.
-    var prakruti : [Int] // Answers for childhood.
+    var prakruti : [Int] // Answers for childhood. A 0 means not answered yet. A score from 1...6 means answered.
     var vikruti: [Int] // Answer for past month.
 
-    // Totals.
-    var vataprakruti: Int = 0
-    var vatavikruti: Int = 0
-    var pittaprakruti: Int = 0
-    var pittavikruti: Int = 0
-    var kaphaprakruti: Int = 0
-    var kaphavikruti: Int = 0
+    var vataprakruti: Int {
+        return prakruti[0...16].reduce(0, +)
+        }
+
+    var pittaprakruti: Int {
+        return prakruti[17...33].reduce(0, +)
+        }
+
+    var kaphaprakruti: Int {
+        return prakruti[34...50].reduce(0, +)
+        }
+
+    var vatavikruti: Int {
+        return vikruti[0...16].reduce(0, +)
+        }
+
+    var pittavikruti: Int {
+        return vikruti[17...33].reduce(0, +)
+        }
+
+    var kaphavikruti: Int {
+        return vikruti[34...50].reduce(0, +)
+        }
 
     init() {
         created = Date()
@@ -79,13 +95,10 @@ class Answers {
         vikruti = Array(repeating: 0, count: 51)
         }
 
-    func calculateTotals() {
-        vataprakruti = prakruti[0...16].reduce(0, +)
-        pittaprakruti = prakruti[17...33].reduce(0, +)
-        kaphaprakruti = prakruti[34...50].reduce(0, +)
-        vatavikruti = vikruti[0...16].reduce(0, +)
-        pittavikruti = vikruti[17...33].reduce(0, +)
-        kaphavikruti = vikruti[34...50].reduce(0, +)
+    // A version of init() which takes another Answers object and copies over the prakruti answers
+    init(_ other: Answers) {
+        created = Date()
+        prakruti = other.prakruti
+        vikruti = Array(repeating: 0, count: 51)
         }
-
     }

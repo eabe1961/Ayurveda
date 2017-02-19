@@ -11,14 +11,17 @@ class DoshaExplanationViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dqvc = segue.destination as! DoshaQuestionViewController
-        print("PREP ", dqvc)
-//        dqvc.vragen = Vragen()
-//        dqvc.antwoorden = Antwoorden(aantalVragen: qvc.vragen.vraagteksten.count)
+        dqvc.answers = Answers()
+        UserDefaults.standard.set(true, forKey: "InQuiz")
         }
 
     @IBAction func unwindToMenu(_ segue: UIStoryboardSegue) {
         let dqvc = segue.source as! DoshaQuestionViewController
-        print(dqvc)
-        // Doe iets met de answers, print(dqvc.answers)
+        let a = dqvc.answers!
+        print(a.created)
+        print(a.prakruti)
+        print(a.vikruti)
+        // TODO: Persisteren
+        UserDefaults.standard.set(false, forKey: "InQuiz")
         }
     }
