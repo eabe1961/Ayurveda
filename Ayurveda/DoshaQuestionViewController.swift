@@ -16,6 +16,7 @@ class DoshaQuestionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        cur = UserDefaults.standard.intForKey(key: "QuizCur", defaultValue: 0)
         fresh()
         }
 
@@ -28,9 +29,16 @@ class DoshaQuestionViewController: UIViewController {
                 return score - 1
                 }
             }
+        titleLabel.text = "\(cur + 1)/\(questions.count)"
         questionLabel.text = questions[cur]
         prakrutiSegment.selectedSegmentIndex = scoreToSegment(answers.prakruti[cur])
         vikrutiSegment.selectedSegmentIndex = scoreToSegment(answers.vikruti[cur])
+        if cur == questions.count - 1 {
+            nextQuestion.setTitle("klaar", for: .normal)
+            }
+        else {
+            nextQuestion.setTitle("volgende vraag", for: .normal)        
+            }
         }
 
 
@@ -45,14 +53,14 @@ class DoshaQuestionViewController: UIViewController {
             }
         answers.prakruti[cur] = segmentToScore(prakrutiSegment.selectedSegmentIndex)
         answers.vikruti[cur] = segmentToScore(vikrutiSegment.selectedSegmentIndex)
-        // TODO: Op dit moment ook persisteren, want app kan elk moment beeindigt worden
+
+        doshaHistory.save()
         cur += 1
+        UserDefaults.standard.set(cur, forKey: "QuizCur")
+
         if cur == questions.count  {
             self.performSegue(withIdentifier: "unwindToMenu", sender: self)
             return
-            }
-        if cur == questions.count - 1 {
-            nextQuestion.setTitle("klaar", for: UIControlState())
             }
         fresh()
         }

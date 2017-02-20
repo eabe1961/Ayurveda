@@ -60,7 +60,7 @@ let questions = [
     ]
 
 
-class Answers {
+class Answers: NSObject, NSCoding {
     var created: Date // Date/time when the quiz was taken.
     var prakruti : [Int] // Answers for childhood. A 0 means not answered yet. A score from 1...6 means answered.
     var vikruti: [Int] // Answer for past month.
@@ -89,7 +89,7 @@ class Answers {
         return vikruti[34...50].reduce(0, +)
         }
 
-    init() {
+    override init() {
         created = Date()
         prakruti = Array(repeating: 0, count: 51)
         vikruti = Array(repeating: 0, count: 51)
@@ -100,5 +100,23 @@ class Answers {
         created = Date()
         prakruti = other.prakruti
         vikruti = Array(repeating: 0, count: 51)
+        }
+
+    required init(coder unarchiver: NSCoder) {
+        created = unarchiver.decodeObject(forKey: "created") as! Date
+        prakruti = unarchiver.decodeObject(forKey: "prakruti") as! [Int]
+        vikruti = unarchiver.decodeObject(forKey: "vikruti") as! [Int]
+        super.init()
+        }
+
+    func encode(with archiver: NSCoder) {
+        archiver.encode(created, forKey: "created")
+        archiver.encode(prakruti, forKey: "prakruti")
+        archiver.encode(vikruti, forKey: "vikruti")
+        }
+
+    // String representation of entire object.
+    override var description: String {
+        return "<DoshaModel: \(created) \(prakruti) \(vikruti)>"
         }
     }

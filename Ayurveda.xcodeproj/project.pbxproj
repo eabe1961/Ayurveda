@@ -12,6 +12,7 @@
 		CE0C02BD1E5863E1000A6A63 /* Texts-development in Resources */ = {isa = PBXBuildFile; fileRef = CE0C02BB1E5863E1000A6A63 /* Texts-development */; };
 		CE0C02BE1E5863E1000A6A63 /* Texts-production in Resources */ = {isa = PBXBuildFile; fileRef = CE0C02BC1E5863E1000A6A63 /* Texts-production */; };
 		CE0C02C01E5863F5000A6A63 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C02BF1E5863F5000A6A63 /* ChaptersViewController.swift */; };
+		CE5923AC1E5A5D11005191EC /* DoshaHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5923AB1E5A5D11005191EC /* DoshaHistory.swift */; };
 		CE8BB3DF1E5A042000E51D37 /* UserDefaults+boolForKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB3DE1E5A042000E51D37 /* UserDefaults+boolForKey.swift */; };
 		CED88B9A1E58ADBE005FF095 /* DoshaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED88B991E58ADBE005FF095 /* DoshaModel.swift */; };
 		CED88B9C1E58B9BB005FF095 /* DoshaExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED88B9B1E58B9BB005FF095 /* DoshaExplanationViewController.swift */; };
@@ -29,6 +30,7 @@
 		CE0C02BB1E5863E1000A6A63 /* Texts-development */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Texts-development"; sourceTree = "<group>"; };
 		CE0C02BC1E5863E1000A6A63 /* Texts-production */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Texts-production"; sourceTree = "<group>"; };
 		CE0C02BF1E5863F5000A6A63 /* ChaptersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
+		CE5923AB1E5A5D11005191EC /* DoshaHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoshaHistory.swift; sourceTree = "<group>"; };
 		CE8BB3DE1E5A042000E51D37 /* UserDefaults+boolForKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+boolForKey.swift"; sourceTree = "<group>"; };
 		CED88B991E58ADBE005FF095 /* DoshaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoshaModel.swift; sourceTree = "<group>"; };
 		CED88B9B1E58B9BB005FF095 /* DoshaExplanationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoshaExplanationViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				CED88B991E58ADBE005FF095 /* DoshaModel.swift */,
+				CE5923AB1E5A5D11005191EC /* DoshaHistory.swift */,
 				CEEFB1D21E58532700CACE57 /* MainMenuViewController.swift */,
 				CE0C02BF1E5863F5000A6A63 /* ChaptersViewController.swift */,
 				CE0C02B91E586347000A6A63 /* ChapterViewController.swift */,
@@ -176,6 +179,7 @@
 				CE0C02BA1E586347000A6A63 /* ChapterViewController.swift in Sources */,
 				CEEFB1D31E58532700CACE57 /* MainMenuViewController.swift in Sources */,
 				CE0C02B81E586255000A6A63 /* Corpus.swift in Sources */,
+				CE5923AC1E5A5D11005191EC /* DoshaHistory.swift in Sources */,
 				CE0C02C01E5863F5000A6A63 /* ChaptersViewController.swift in Sources */,
 				CEEFB1D11E58532700CACE57 /* AppDelegate.swift in Sources */,
 				CED88B9E1E58B9D2005FF095 /* DoshaQuestionViewController.swift in Sources */,

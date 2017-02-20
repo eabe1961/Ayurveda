@@ -3,11 +3,17 @@
 
 import UIKit
 
+var doshaHistory: DoshaHistory!
+
 class MainMenuViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
             navigationItem.title = "Ayur·veda"
+
+            doshaHistory = DoshaHistory()
+            // doshaHistory.erase()
+            print("doshaHistory at startup: ", doshaHistory)
 
             // If the file 'Texts-production/Introductie.html' exists, use the production content. Otherwise, use the development content.
             var sourceDir = "Texts-development"

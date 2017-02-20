@@ -230,15 +230,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosha Assessment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-e0-jA2">
-                                <rect key="frame" x="16" y="72" width="343" height="33.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosha Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-e0-jA2" userLabel="Dosha Test">
+                                <rect key="frame" x="16" y="72" width="343" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1za-bn-Ce7">
                                 <rect key="frame" x="16" y="113.5" width="343" height="108.5"/>
-                                <string key="text">TODO: Hier uitleg over de assessment, en eventueel een melding wanneer de laatste assessment werd gedaan (en een opmerking dat het vaker doen dan eens in de twee maanden niet zoveel zin heeft.</string>
+                                <string key="text">TODO: Hier uitleg over de test, en eventueel een melding wanneer de laatste test werd gedaan (en een opmerking dat het vaker doen dan eens in de twee maanden niet zoveel zin heeft.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -250,14 +250,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV9-wF-hVu">
-                                <rect key="frame" x="16" y="259" width="343" height="108.5"/>
-                                <string key="text">TODO: Eventueel een uitleg dan een eerder ingevulde assessment (questionnaire? quiz?) hervat wordt omdat de vorige invulling afgebroken werd, om wat voor reden dan ook.</string>
+                                <rect key="frame" x="16" y="259" width="343" height="86.5"/>
+                                <string key="text">TODO: Eventueel een uitleg dan een eerder ingevulde test hervat wordt omdat de vorige invulling afgebroken werd, om wat voor reden dan ook</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qw4-F8-JGp">
-                                <rect key="frame" x="16" y="375" width="343" height="30"/>
+                                <rect key="frame" x="16" y="353" width="343" height="30"/>
                                 <state key="normal" title="Start / Ga verder"/>
                                 <connections>
                                     <segue destination="aYa-fb-tUb" kind="show" id="qaW-iu-gse"/>
@@ -283,6 +283,11 @@
                             <constraint firstItem="UV9-wF-hVu" firstAttribute="top" secondItem="Oor-f2-6bX" secondAttribute="bottom" constant="8" id="xPf-Sv-ncl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="explanationLabel" destination="1za-bn-Ce7" id="Ivj-JK-dce"/>
+                        <outlet property="incompleteLabel" destination="UV9-wF-hVu" id="egD-vX-mBG"/>
+                        <outlet property="startButton" destination="qw4-F8-JGp" id="Dua-lG-fD9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e19-2c-wrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
