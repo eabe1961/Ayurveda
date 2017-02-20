@@ -36,8 +36,15 @@ class DoshaHistory: CustomStringConvertible {
         }
 
     // Create a new Answers instance and add it to the log; also saves it. Returns the newly created instance.
+    // If previous Answers exist in the log, copy over the pakruti scores from the latest.
     func add() -> Answers {
-        let new = Answers()
+        var new: Answers
+        if let lat = latest() {
+            new = Answers(lat)
+            }
+        else {
+            new = Answers()
+            }
         log[new.created] = new
         save()
         return new
